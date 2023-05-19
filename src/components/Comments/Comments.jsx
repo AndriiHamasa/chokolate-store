@@ -1,4 +1,4 @@
-import comments from '../comments.json'
+import comments from '../commentObject.json'
 import { CommentItem } from 'components/CommentItem';
 import { Button } from 'components/Butoon';
 
@@ -9,7 +9,7 @@ export const Comments = () => {
     <>
       <h2>chocolate is loved</h2>
       <ul>
-        {comments.map((comment) => <CommentItem data={ comment} />)}
+        {comments.map((comment) => <CommentItem key={comment.id} data={ comment} />)}
       </ul>
       <Button text="Leave  a review"/>
     </>
