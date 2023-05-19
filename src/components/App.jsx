@@ -1,16 +1,19 @@
+import { Header } from "./Header/Header";
+import { Main } from "./Main";
+import { nanoid } from "nanoid";
+
 export const App = () => {
+
+
+  const getViewportWidth = () => {
+    return window.innerWidth;
+  }
+  console.log(nanoid())
+
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div>
+      <Header width={getViewportWidth()} />
+      <Main/>
     </div>
   );
 };
